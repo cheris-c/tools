@@ -1,6 +1,73 @@
+TMUX:
+    ctrl+b ?            显示快捷键帮助
+    ctrl+b 空格键       采用下一个内置布局，这个很有意思，在多屏时，用这个就会将多有屏幕竖着展示
+    ctrl+b !            把当前窗口变为新窗口
+    ctrl+b  "           模向分隔窗口
+    ctrl+b %            纵向分隔窗口
+    ctrl+b q            显示分隔窗口的编号
+    ctrl+b o            跳到下一个分隔窗口。多屏之间的切换
+    ctrl+b 上下键      上一个及下一个分隔窗口
+    ctrl+b C-方向键    调整分隔窗口大小
+    ctrl+b &           确认后退出当前tmux
+    ctrl+b [           复制模式，即将当前屏幕移到上一个的位置上，其他所有窗口都向前移动一个。
+    ctrl+b c           创建新窗口
+    ctrl+b n           选择下一个窗口
+    ctrl+b l           最后使用的窗口
+    ctrl+b p           选择前一个窗口
+    ctrl+b w           以菜单方式显示及选择窗口
+    ctrl+b s           以菜单方式显示和选择会话。这个常用到，可以选择进入哪个tmux
+    ctrl+b t           显示时钟。然后按enter键后就会恢复到shell终端状态
+    ctrl+b d           脱离当前会话；这样可以暂时返回Shell界面，输入tmux attach能够重新进入之前的会话
+
+xshell快捷键：
+    ctrl + tab / shift +tab 切换窗口
+
+修改一个文件夹下所有文件权限：
+    chmod 777 * -R
+
 文件共享：
 ftp: lftp + ip名 //连接计算机 
 get + 文件名 //拷贝文件到当前目录
+windows上匿名登录ftp：
+    ftp + ip名
+    在输入用户名时输入anonymous,密码输入任意邮箱即可
+
+tftp(选项)(参数)    
+    -c：指定与tftp服务器连接成功后，立即要执行的指令；  
+    -m：指定文件传输模式。可以是ASCII或者Binary；
+    -v：显示指令详细执行过程；
+    -V：显示指令版本信息。
+
+tftp your-ip-address
+进入TFTP操作：
+    connect：连接到远程tftp服务器
+    mode：文件传输模式
+    put：上传文件
+    get：下载文件
+    quit：退出
+    verbose：显示详细的处理信息
+    tarce：显示包路径
+    status：显示当前状态信息
+    binary：二进制传输模式
+    ascii：ascii 传送模式
+    rexmt：设置包传输的超时时间
+    timeout：设置重传的超时时间
+    help：帮助信息
+    ? ：帮助信息    
+例如：
+    tftp 192.168.1.2
+    tftp>get <download file> 
+    tftp>put <upload file>
+    tftp>q
+
+Busybox中tftp命令的用法:
+    tftp [option] ... host [port]
+    -g 表示下载文件 (get)
+    -p 表示上传文件 (put)
+    -l 表示本地文件名 (local file)
+    -r 表示远程主机的文件名 (remote file)
+    例如，要从远程主机192.168.1.2上下载 embedexpert，则应输入以下命令
+        tftp -g -r embedexpert 192.168.1.2
 
 
 文件和目录命名：
@@ -10,7 +77,7 @@ rm -rf desktop          	//删除一个目录desktop, 谨慎使用，一旦删�
 如何将一个目录里面的文件全部拷贝到另外一个目录
 
 解压和压缩：
-tar -ivxf ctags-5.8.tar.gz  //解压ctags-5.8.tar.gz
+tar -vxf ctags-5.8.tar.gz  //解压ctags-5.8.tar.gz
 tar
 -c: 建立压缩档案
 -x：解压
@@ -62,12 +129,7 @@ unzip -j wwwroot.zip
 -P：使用zip的密码选项
 -q：执行时不显示任何信息
 -s：将文件名中的空白字符转换为底线字符
--V：保留VMS的文件版本信息
 -X：解压缩时同时回存文件原来的UID/GID
-
-插件命令：
-ctags -R //迭代便利当前目录，生成tags文件
-
 
 文件权限：
 chown enuhack ***   //修改***文件所属用户为enuhack
