@@ -1,0 +1,15 @@
+使用新new_vimrc
+[插件安装]
+	使用Vundle管理插件
+		
+
+[快捷键]:
+	F2: 打开NERDTree
+	F3: YouCompleteMe-force recomile with syntastcic
+	'\jd': 跳转到定义处
+	'\tl': 打开或关闭TagList
+	'\tb': 打开或关闭TagBar
+	'Ctrl+p': 打开Ctrlp
+	'Ctrl+n': 切换tab
+	'\cc': 单行注释或多行注释
+	'\cu': 取消注释

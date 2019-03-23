@@ -78,6 +78,8 @@ rm -rf desktop          	//删除一个目录desktop, 谨慎使用，一旦删�
 
 解压和压缩：
 tar -vxf ctags-5.8.tar.gz  //解压ctags-5.8.tar.gz
+tar -zvf tool.rar tools/
+
 tar
 -c: 建立压缩档案
 -x：解压
@@ -135,5 +137,6 @@ unzip -j wwwroot.zip
 chown enuhack ***   //修改***文件所属用户为enuhack
 chgrp enuhack ***   //修改***文件所属组为enuhack
 
-
+远程拷贝:
+scp root@47.110.36.159:/root/ct-repo/tool.rar ./
 
