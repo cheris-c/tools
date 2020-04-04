@@ -1,3 +1,0 @@
-multiplication.o: lib/multiplication.cpp lib/multiplication.h
-
-lib/multiplication.h:

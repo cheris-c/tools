@@ -1,3 +1,0 @@
-subtraction.o: lib/subtraction.cpp lib/subtraction.h
-
-lib/subtraction.h:
