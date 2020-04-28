@@ -1,3 +1,0 @@
-addition.o: lib/addition.cpp lib/addition.h
-
-lib/addition.h:
